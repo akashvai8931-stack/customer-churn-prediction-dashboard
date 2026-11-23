@@ -1,6 +1,6 @@
 # Customer Churn Prediction and Sales Dashboard
 
-A telecom churn project: data cleaning, model comparison, customer segmentation, revenue impact and a Power BI dashboard (an introduction page and five analysis pages). Made during my data science internship at Zidio Development.
+A telecom churn project: data cleaning, model comparison, customer segmentation, revenue impact and a six-page Power BI dashboard (an introduction page and five analysis pages). Made during my data science internship at Zidio Development.
 
 ## Key results
 
@@ -17,11 +17,13 @@ A telecom churn project: data cleaning, model comparison, customer segmentation,
 
 ## What is inside
 
-- `notebooks/` : the full Python notebook (cleaning, features, models, segments, risk levels)
+- `notebooks/` : the full Python notebook (cleaning, features, models, segments, risk levels). The outputs are cleared.
 - `models/` : the saved Logistic Regression model and scaler
-- `dashboard/` : dashboard screenshots and notes
-- `report/` : the final project report (PDF)
-- `data/` : notes about the data. The data files are not included, because they contain customer IDs.
+- `dashboard/` : notes and screenshots of the six dashboard pages
+- `report/` : the final project report (PDF, 23 pages)
+- `data/` : notes about the data
+
+The data files, the scored customer files, the watchlist and the Power BI file (.pbix) are not published, because they contain customer IDs.
 
 ## Models compared
 
@@ -41,12 +43,29 @@ Logistic Regression, XGBoost and LightGBM score almost the same, so the simple, 
 
 ## Dashboard pages
 
-1. **Introduction** : project title, author and mentor
-2. **Churn Overview** : churn by contract, internet service, payment method and tenure
-3. **Segments and Risk** : 4 K-Means segments and 3 risk levels
-4. **Retention Watchlist** : 1,003 active High-risk customers and $77,068 monthly revenue at risk
-5. **Patterns and Revenue** : contract by internet service heatmap, churn by tenure, revenue charts
-6. **Segment Actions** : ideas to test for each segment
+**1. Introduction** : project title, author and mentor
+
+![Introduction](dashboard/screenshots/01_introduction.png)
+
+**2. Churn Overview** : churn by contract, internet service, payment method and tenure
+
+![Churn Overview](dashboard/screenshots/02_churn_overview.png)
+
+**3. Segments and Risk** : 4 K-Means segments and 3 risk levels
+
+![Segments and Risk](dashboard/screenshots/03_segments_and_risk.png)
+
+**4. Retention Watchlist** : 1,003 active High-risk customers and $77,068 monthly revenue at risk (customer IDs hidden)
+
+![Retention Watchlist](dashboard/screenshots/04_retention_watchlist.png)
+
+**5. Patterns and Revenue** : contract by internet service heatmap, churn by tenure, revenue charts
+
+![Patterns and Revenue](dashboard/screenshots/05_patterns_and_revenue.png)
+
+**6. Segment Actions** : ideas to test for each segment
+
+![Segment Actions](dashboard/screenshots/06_segment_actions.png)
 
 ## Limits (honest)
 
