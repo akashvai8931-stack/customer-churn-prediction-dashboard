@@ -1,84 +1,16 @@
-# Customer Churn Prediction and Sales Dashboard
+# Dashboard
 
-A telecom churn project: data cleaning, model comparison, customer segmentation, revenue impact and a six-page Power BI dashboard (an introduction page and five analysis pages). Made during my data science internship at Zidio Development.
+The Power BI dashboard has six pages. The screenshots are in the `screenshots/` folder.
 
-## Key results
+1. Introduction
+2. Churn Overview
+3. Segments and Risk
+4. Retention Watchlist
+5. Patterns and Revenue
+6. Segment Actions
 
-| Item | Result |
-|---|---|
-| Customers | 7,043 |
-| Churn rate | 26.54% (1,869 churners) |
-| Monthly revenue | $456,117 |
-| Revenue lost to churn | $139,131 (30.5%) |
-| Main model | Logistic Regression with class weights |
-| Test ROC-AUC / recall / precision | 0.84 / 79% / 50% |
-| High risk level | 34% of customers, 70% of churners |
-| Retention watchlist | 1,003 active High-risk customers |
+## Please note
 
-## What is inside
-
-- `notebooks/` : the full Python notebook (cleaning, features, models, segments, risk levels). The outputs are cleared.
-- `models/` : the saved Logistic Regression model and scaler
-- `dashboard/` : notes and screenshots of the six dashboard pages
-- `report/` : the final project report (PDF, 23 pages)
-- `data/` : notes about the data
-
-The data files, the scored customer files, the watchlist and the Power BI file (.pbix) are not published, because they contain customer IDs.
-
-## Models compared
-
-Cross-validation ROC-AUC (5 folds, training data only):
-
-| Model | ROC-AUC |
-|---|---|
-| XGBoost | 0.8481 |
-| LightGBM | 0.8477 |
-| Logistic Regression (balanced) | 0.8458 |
-| ANN (scikit-learn) | 0.8354 |
-| ANN (TensorFlow/Keras) | 0.8315 |
-| Random Forest | 0.8303 |
-| Decision Tree | 0.8194 |
-
-Logistic Regression, XGBoost and LightGBM score almost the same, so the simple, explainable model was chosen.
-
-## Dashboard pages
-
-**1. Introduction** : project title, author and mentor
-
-![Introduction](dashboard/screenshots/01_introduction.png)
-
-**2. Churn Overview** : churn by contract, internet service, payment method and tenure
-
-![Churn Overview](dashboard/screenshots/02_churn_overview.png)
-
-**3. Segments and Risk** : 4 K-Means segments and 3 risk levels
-
-![Segments and Risk](dashboard/screenshots/03_segments_and_risk.png)
-
-**4. Retention Watchlist** : 1,003 active High-risk customers and $77,068 monthly revenue at risk (customer IDs hidden)
-
-![Retention Watchlist](dashboard/screenshots/04_retention_watchlist.png)
-
-**5. Patterns and Revenue** : contract by internet service heatmap, churn by tenure, revenue charts
-
-![Patterns and Revenue](dashboard/screenshots/05_patterns_and_revenue.png)
-
-**6. Segment Actions** : ideas to test for each segment
-
-![Segment Actions](dashboard/screenshots/06_segment_actions.png)
-
-## Limits (honest)
-
-- The risk score is a ranking, not a probability.
-- Accuracy fell to the "always no churn" level (73.4%) when recall went up.
-- About 45% of High-risk test customers did not leave.
-- The results show association, not cause.
-- The data has no dates, so an RNN, sales growth by period, Prophet and purchase frequency were not possible.
-
-## How to run
-
-Install the libraries with `pip install -r requirements.txt`, then open `notebooks/Customer_Churn_Python_Clean.ipynb` in JupyterLab (Python 3.13). The data file is not in this repository, so the notebook needs your own copy of the telecom churn data.
-
-## Author
-
-Akash Vaishnav, Data Science Intern, Zidio Development.
+- The Power BI file (.pbix) is not published, because it contains customer data and customer IDs.
+- In the Retention Watchlist screenshot, the Customer ID column is hidden for privacy.
+- The Contract slicer works on the Churn Overview and the Segments and Risk pages.
